@@ -1,0 +1,30 @@
+let animals = [
+    {name : 'lion', size : 'big', isAggressive : true, weight : 200},
+    {name : 'monkey', size : 'medium', isAggressive : true, weight : 30},
+    {name : 'cat', size : 'small', isAggressive : false, weight : 10},
+    {name : 'rat', size : 'small', isAggressive : false, weight : 2}
+]  // 다음과 같은 오브젝트 배열이 있다고 가정
+
+- forEach : 배열의 크기 만큼 반복하면서 value에 오브젝트를 전달 -
+animals.forEach(function(value){
+  console.log(value.size)
+  console.log(value)
+})
+
+- map : 값을 추가 또는 삭제 해서 새로운 배열을 제 생생 -
+let animals_names = animals.map(function(value){
+  return `몸무게는 : ${value.weight} 입니다.`
+})
+
+- filter : 조건에 맞는 값을 반환해서 새로운 배열을 제 생성 -
+let animals_filter = animals.filter(function(value){
+  return value.size === "small"
+})
+
+- 삼항연산자 -
+let a = prompt("정수를 입력 : ")
+let check = parseInt(a) % 2 == 0 ? true : false
+// 2를 입력시 조건이 참이므로 true를 반환
+// 3을 입력시 조건이 거짓이므로 false를 반환
+
+

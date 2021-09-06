@@ -1,0 +1,63 @@
+//Object나 Array나 모두 같은 Object type 입니다. typeof 검사해보기
+//Object Array의 차이 : (key : value)가 존재하면 Object, value만 존재하면 Array입니다.
+
+//1.Object
+const obj1 = { name : "hong" , age : 20 , "대한민국" : "만세"} //오브젝트르 생성하는 방법1
+const obj2 = new Object({                //오브젝트를 생성하는 방법2
+    name : 'honggildong', age: 100
+})
+
+// 오브젝트에 객체를 추가하는 방법
+obj1.address = "경기도 동두천시"       //데이터를 추가하는 방법
+obj1.address = "지행동"              //기존의 존재하는 key가 있을경우 데이터가 덮어씌운다.
+
+// 오브젝트의 key, value를 출력하는 방법
+for(key in obj1){
+    let temp = `key : ${key}, value : ${obj1[key]}`
+    console.log(temp)
+}
+
+// 오브젝트 method
+console.log(Object.keys(obj1))          //obj1 오브젝트 변수에 있는 key를 전부 반환한다.
+console.log(Object.values(obj2))        //obj2 오브젝트 변수에 있는 value를 전부 반환한다.
+console.log(Object.keys(obj1).length)   //obj1 오브젝트 변수의 길이를 알아내는 방법.
+console.log(Object.entries(obj1))       //2차원 리스트 형태로 반환한다.
+
+for(let i = 0; i < Object.entries(obj2).length; i++){ 
+    let temp = Object.entries(obj2)[i];
+    console.log(temp[0], " : ", temp[1])
+}
+
+//2.array
+const arr = [3,2,1]       // 배열을 선언하는 방법1
+const arr1 = new Array(); // 배열을 선언하는 방법2
+
+console.log(Object.values(arr))  // arr의 값을 리스트로 반환한다.
+
+console.log(arr.some(item => item === 3)) //해당 arr배열에 3이 있니?
+console.log(arr.every(item => item === 2)) //arr배열에 모든 values가 2니?
+console.log(arr.includes(10))              //arr배열에 10이 있니?
+
+//(push, pop, splice, sort , reverse, indexOf, copyWithin)
+function write(array){
+    console.log("배열출력 : " + array)
+}
+
+let arr2 = new Array();
+
+arr2.push(10)           //맨뒤에 값을 추가한다.
+arr2.push(20);arr2.push(30);arr2.push(40)
+arr2.push(301);arr2.push(3330);arr2.push(330)
+
+write(arr2)
+console.log(arr2.pop()) //맨뒤에 값을 삭제하고 삭제된 값을 반환합니다. (원본 배열이 수정된다.!!)
+arr2.splice(1,1)        //arr2배열에 1번째 인덱스부터 1개의 값을 삭제하겠다.
+write(arr2)
+arr2.splice(1, 3)       //arr2배열에 1번째 인덱스부터 3개의 값을 삭제하겠다.
+write(arr2)
+
+arr2.sort()             //arr2배열을 오름차순으로 정렬한다.
+arr2.reverse()          //arr2배열을 내림차순으로 정렬한다.
+
+console.log(arr2.indexOf(10))  //arr2배열에서 주어진 값과 일치하는 인덱스를 반환합니다. 단(해당값이 존재하지 않으면 -1반환)
+arr1 = arr2.cpyWithin()        //arr1배열에 arr2의 모든 value를 복사한다.

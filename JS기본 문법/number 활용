@@ -1,0 +1,23 @@
+// 3개다 숫자만 출력된다.
+console.log(parseInt('123'))        
+console.log(parseInt('123abc'))
+console.log(parseInt('123.4464'))  
+
+// 3개다 실수형태로 출력한다.
+console.log(parseFloat('1234.1'))
+console.log(parseFloat('1234.3abc'))
+console.log(parseFloat('1234.3abc3'))  //단 여기 부분은 1234.3까지만 출력이된다.
+
+// Not a number : 문자열인지 검사합니다.
+let v = "abc"
+console.log('v' , isNaN(v))  // v는 문자열이기 때문에 true
+v = 124
+console.log('v', isNaN(v)) 
+
+
+// Math
+console.log(Math.max(10,20,30))  //가장 큰 수를 반환
+console.log(Math.min(10,20,30))  //가장 작은 수를 반환
+let a = 2; let b = 3
+console.log(Math.pow(a,b))       //a ^ b  -> 2의 3제곱을 반환한다.
+console.log(Math.floor(Math.random() * 30))  // random을 사용하면 소수점까지 같이 나오지만 floor을 사용하면 random에서 출력된 소수점 뒷 부분을 잘라준다.
