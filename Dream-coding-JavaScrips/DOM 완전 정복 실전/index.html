@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 완전 정복</title>
+    <style>
+        *{ box-sizing : border-box;} body { text-align: center; background-color: #ced3df; margin : 0px}
+        ul { padding : 0px; margin : 0px;} li{ list-style :none} p { padding : 0px; margin : 0px} button {background: none; border : none; cursor :pointer; outline: none;}
+        section { margin : auto; width: 400px;background-color: white; border-radius : 20px;}
+        header { border-radius : 20px 20px 0 0; height : 48px; padding : 8px; font-size : 24px;  background: rgba(237, 193, 211); background: linear-gradient(166deg,rgba(237, 193, 211, 1) 0%,rgba(219, 192, 216, 1) 35%,rgba(127, 188, 242, 1) 100%); }
+        header p { color : white;}
+        ul { height : 500px; overflow-y: auto;}
+        ul li div{ display: flex; justify-content: space-between; padding : 14px 32px;}
+        .line { height: 1px; background-color: #ccc;}
+        ul li div button {  transition: all 0.5s; font-size : 16px;}
+        ul li span { text-align: left;}
+        ul li div button:hover { color : red; transform : scale(1.1); transition: all 0.5s ;}
+        footer { border-radius : 0 0  20px 20px; background: rgba(237, 193, 211); background: linear-gradient(166deg,rgba(237, 193, 211, 1) 0%,rgba(219, 192, 216, 1) 35%,rgba(127, 188, 242, 1) 100%);}
+        footer input { width: 100%; height : 32px; border: none; outline : none; background-color : #ccc; padding : 0px 10px;}
+        footer button { width: 48px; height: 48px; font-size : 30px; background-color : pink; border-radius : 50%; color : white; }
+        footer button:hover { -webkit-box-shadow: 0px 0px 15px 5px white; box-shadow: 0px 0px 15px 5px white;}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <section>
+        <header class="header">
+            <p>Shopping List</p>
+        </header>
+        <ul>
+            <li class="item_row">
+                <div>
+                    <span class="value">달걀</span>
+                    <button class= "remove"><i class="fas fa-trash-alt"></i></button>
+                </div>
+                <article class="line"></article>
+            </li>
+            
+        </ul>
+        <footer>
+            <input type="text" class="footer_input" placeholder="입력">
+            <button>
+                <i class="fas fa-plus"></i>
+            </button>
+        </footer>
+    </section>
+    <script src ="index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,7 @@
+$(window).keypress(function(value) {
+    if(value.which == 65) alert("대문자 A를 선택했습니다.")
+    if(value.which == 13) alert("Enter")
+})
+
+// keypress로 keyCode를 대신할 수 있습니다.
+

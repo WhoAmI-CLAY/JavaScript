@@ -1,0 +1,5 @@
+img { width: 100px; height: 100px;}
+body { background-color: black; margin : 0px;}
+main { width: 100px; height: auto; margin : 0px auto;}
+button{ border: none; padding : 0px; width: 80px; height : 30px; background-color: #ccc; color : black; margin-bottom : 20px; cursor :pointer;}
+
