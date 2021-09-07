@@ -32,6 +32,8 @@ console.log(input.split(" "))          //해당 문자열을 공백을 기준으
 console.log(input.trim())              //해당 문자열의 앞 뒤 공백을 제거한다.
 
 console.log(isNaN("123"))              //문자열이 숫자일 경우 = false, 숫자가 아닐 경우 = true 
+console.log("1".padStart(2, "0"))      //해당 문자열의 길이가 2보다 작을 경우 앞에 0을 추가하여 문자열을 반환한다. result = "01"
+console.log("1".padEnd(2, "0"))        //해당 문자열의 길이가 2보다 작을 경우 뒤에 0을 추가하여 문자열을 반환한다. result = "10"
 
 let str = "123"
 let num = 123
