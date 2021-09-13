@@ -13,6 +13,7 @@ function removeToDoList(event){
     let li = event.target.parentElement;
     li.remove();
 
+    // localStorage에 삭제한 데이터 반영 절차
     ToDos = []
     for(let i = 0; i < ToDoList.childElementCount; i++) {
         let value = $(ToDoList).find(`li:nth-child(${i + 1})`).find('span').text();
