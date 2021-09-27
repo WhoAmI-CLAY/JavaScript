@@ -1,0 +1,9 @@
+button { padding : 0px; background : none; border : none; cursor : pointer;}
+body { position : relative;  margin : 0px; }
+form { position : absolute; left : 50%; margin-top : 150px; transform: translateX(-50%);}
+form input { text-align: center; box-sizing: border-box; width :100%;  padding : 5px 10px;}
+
+.name-content { display: none; 
+    position : absolute; left : 50%; margin-top : 150px; transform: translateX(-50%);  }
+.name-content button { opacity: 0; margin-left : 40px; font-size : 18px;}
+.name-content:hover button { opacity: 1;}
